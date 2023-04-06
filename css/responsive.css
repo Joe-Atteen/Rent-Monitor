@@ -4,15 +4,21 @@
   }
 }
 
+@media screen and (max-width: 1799px) {
+  nav .links {
+    width: 500px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   nav .links {
-    width: 45%;
+    width: 450px;
   }
 }
 
 @media screen and (max-width: 930px) {
   nav .links {
-    width: 50%;
+    width: 450px;
   }
 }
 
@@ -542,10 +548,124 @@
   }
 }
 
+@media screen and (max-width: 1389px) {
+  .pricing .options {
+    display: grid;
+    justify-content: center;
+  }
+
+  .pricing .options .trial {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .pricing .options .trial {
+    width: 500px;
+    background-size: 535px 950px;
+  }
+
+  .pricing .options .plan {
+    width: 500px;
+    background-size: 535px 950px;
+  }
+
+  .pricing .options .plan .select {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .pricing .options .trial {
+    width: 400px;
+    background-size: 535px 950px;
+    padding: 216px 10px 0 10px;
+  }
+
+  .pricing .options .plan {
+    width: 400px;
+    background-size: 535px 970px;
+    padding: 136px 10px 0 10px;
+  }
+
+  .pricing .options .plan .select {
+    width: 350px;
+  }
+
+  .pricing .options .trial .start button {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .pricing .options .trial {
+    width: 350px;
+    background-size: 535px 950px;
+  }
+
+  .pricing .options .plan {
+    width: 350px;
+    background-size: 535px 970px;
+  }
+
+  .pricing .options .plan .select {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .pricing .options .trial {
+    width: 300px;
+    background-size: 535px 950px;
+  }
+
+  .pricing .options .plan {
+    width: 300px;
+    background-size: 535px 970px;
+  }
+
+  .pricing .options .plan .select {
+    width: 250px;
+  }
+}
+
 @media screen and (max-width: 1250px) {
   aside {
     width: 90%;
-    height: 258px;
+    /* height: 258px; */
+  }
+}
+
+@media screen and (max-width: 1001px) {
+  aside {
+    width: 90%;
+    display: grid;
+  }
+
+  aside .beyond {
+    width: 100%;
+    padding: 30px 30px;
+  }
+
+  aside .assist {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    padding: 30px 30px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  aside {
+    width: 95%;
+  }
+
+  aside .beyond {
+    padding: 30px 10px;
+  }
+
+  aside .assist {
+    padding: 30px 10px;
   }
 }
 

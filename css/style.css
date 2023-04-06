@@ -44,9 +44,8 @@ nav .icon .line {
 }
 
 .grey {
-  background-color: #bcbcbc;
+  background-color: #171b2a;
   transition: all 0.3s ease-in-out;
-  z-index: 200;
 }
 
 nav {
@@ -357,11 +356,46 @@ header {
 .products .images .image {
   width: 283px;
   border-radius: 10px;
-  filter: brightness(60%);
+  position: relative;
+  cursor: pointer;
 }
 
 .products .images .image img {
   border-radius: 10px;
+  filter: brightness(60%);
+}
+
+.products .images .image .more {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: linear 0.4s all;
+  opacity: 0;
+  text-align: center;
+}
+
+.products .images .image .more .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f8f9fd;
+  margin-bottom: 10px;
+}
+
+.products .images .image .more .location {
+  font-size: 16px;
+  color: #f8f9fd;
+  margin-bottom: 30px;
+}
+
+.products .images .image .more button {
+  padding: 10px 30px;
+  color: #f8f9fd;
+  background: #14957c;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .list {
@@ -866,7 +900,6 @@ button {
 .pricing .options .trial,
 .pricing .options .plan {
   width: 604px;
-  height: 745px;
   background: #fff;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -874,11 +907,147 @@ button {
 
 .pricing .options .trial {
   margin-right: 40px;
+  background: url("../images/trial-bg.png") center no-repeat;
+  padding: 216px 25px 0 25px;
+}
+
+.pricing .options .plan {
+  background: url("../images/plan-bg.png") center no-repeat;
+  padding: 136px 25px 0 25px;
+}
+
+.pricing .options .trial h3,
+.pricing .options .plan h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #404040;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.pricing .options .trial p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #404040;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.pricing .options .trial h4,
+.pricing .options .plan h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #404040;
+  margin-bottom: 15px;
+}
+
+.pricing .options .what-you-get {
+  display: flex;
+  align-items: start;
+}
+
+.pricing .options .trial .what-you-get p,
+.pricing .options .plan .what-you-get p {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.8;
+  color: #404040;
+}
+
+.pricing .options .trial .create {
+  text-align: left;
+  margin: 20px 0 50px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.8;
+  color: #404040;
+}
+
+.pricing .options .hor-line {
+  width: 100%;
+  height: 1px;
+  background: #f0f0f0;
+}
+
+.pricing .options .plan .hor-line {
+  margin-top: 30px;
+}
+
+.pricing .options .trial .start,
+.pricing .options .plan .start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.pricing .options .trial .start p,
+.pricing .options .plan .start p {
+  margin: 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #404040;
+}
+
+.pricing .options .trial .start p span,
+.pricing .options .plan .start p span {
+  margin: 0;
+  text-align: left;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  color: #000;
+}
+
+.pricing .options .trial .start button,
+.pricing .options .plan .start button {
+  height: 41px;
+  padding: 0 20px;
+  background: #14957c;
+  border-radius: 5px;
+  color: #f8f9fd;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  align-items: start;
+}
+
+.pricing .options .trial .start button img {
+  margin: -5px 5px -5px -5px;
+}
+
+.pricing .options .plan p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #404040;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.pricing .options .plan .select {
+  margin-bottom: 40px;
+}
+
+.pricing .options .plan .start button {
+  width: 141px;
+  height: 41px;
 }
 
 aside {
   width: 1130px;
-  height: 258px;
+  /* height: 258px; */
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin: 0 auto 0 auto;
@@ -887,6 +1056,59 @@ aside {
   left: 50%;
   transform: translate(-50%, 0);
   background: #fff;
+  display: flex;
+}
+
+aside .beyond {
+  width: 35%;
+  color: #404040;
+  padding: 52px 30px;
+}
+
+aside .beyond h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+aside .beyond p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  opacity: 0.7;
+}
+
+aside .assist {
+  width: 65%;
+  background: #14957c;
+  border-radius: 0 20px 20px 0;
+  padding: 74px 60px;
+}
+
+aside .assist h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+aside .assist p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+
+aside .assist button {
+  padding: 10px 35px;
+  background: #f8f9fd;
+  color: #14957c;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 footer {
@@ -980,4 +1202,19 @@ footer .bottom p {
 footer a {
   text-decoration: none;
   color: #f8f9fd;
+}
+
+#scroll-up-btn {
+  position: fixed;
+  bottom: 8%;
+  right: 3.4%;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 100%;
+  background-color: #14957c;
+  color: #f8f9fd;
+  cursor: pointer;
+  display: none;
 }

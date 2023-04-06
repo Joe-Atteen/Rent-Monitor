@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - sectionHeight / 1) {
+    if (scrollY >= sectionTop - sectionHeight / 6) {
       current = section.getAttribute("id");
     }
   });
@@ -29,3 +29,39 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+const image = document.querySelectorAll(".image");
+const more = document.querySelectorAll(".more");
+for (let i = 0; i < image.length; i++) {
+  image[i].addEventListener("mouseover", function () {
+    more[i].style.transform = "translate(-50%,-89%)";
+    more[i].style.opacity = 1;
+  });
+  image[i].addEventListener("mouseout", function () {
+    more[i].style.transform = "translate(-50%)";
+    more[i].style.opacity = 0;
+  });
+}
+
+//top page button
+mybutton = document.getElementById("scroll-up-btn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 175 ||
+    document.documentElement.scrollTop > 175
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
