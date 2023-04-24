@@ -568,11 +568,20 @@
 
   .pricing .options .plan {
     width: 500px;
-    background-size: 535px 950px;
+    background-size: 535px 1050px;
   }
 
-  .pricing .options .plan .select {
-    width: 450px;
+  .pricing .options .plan .select .radio-options {
+    display: grid;
+    justify-content: left;
+  }
+
+  .pricing .options .plan .select .radio-options div {
+    width: 100%;
+  }
+
+  .pricing .options .plan .select .radio-options div:nth-child(1) {
+    margin-bottom: 5px;
   }
 }
 
@@ -585,12 +594,8 @@
 
   .pricing .options .plan {
     width: 400px;
-    background-size: 535px 970px;
+    /* background-size: 535px 970px; */
     padding: 136px 10px 0 10px;
-  }
-
-  .pricing .options .plan .select {
-    width: 350px;
   }
 
   .pricing .options .trial .start button {
@@ -606,11 +611,7 @@
 
   .pricing .options .plan {
     width: 350px;
-    background-size: 535px 970px;
-  }
-
-  .pricing .options .plan .select {
-    width: 300px;
+    /* background-size: 535px 970px; */
   }
 }
 
@@ -622,11 +623,7 @@
 
   .pricing .options .plan {
     width: 300px;
-    background-size: 535px 970px;
-  }
-
-  .pricing .options .plan .select {
-    width: 250px;
+    /* background-size: 535px 970px; */
   }
 }
 

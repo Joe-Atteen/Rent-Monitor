@@ -903,6 +903,7 @@ button {
   background: #fff;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  height: auto;
 }
 
 .pricing .options .trial {
@@ -1040,6 +1041,53 @@ button {
   margin-bottom: 40px;
 }
 
+.pricing .options .plan .select h3 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #404040;
+  margin-bottom: 13px;
+}
+
+.pricing .options .plan .select .radio-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing .options .plan .select .radio-options div {
+  width: 49%;
+  padding: 10px;
+  border: 1px solid #404040;
+  border-radius: 5px;
+}
+
+.pricing .options .plan .select .radio-options div label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #404040;
+}
+
+.pricing .options .plan .select .radio-options div .affordable-pricing {
+  padding: 2px 10px;
+  background: #404040;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f8f9fd;
+  border-radius: 4px;
+  margin-left: 13px;
+}
+
+.tab {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
 .pricing .options .plan .start button {
   width: 141px;
   height: 41px;
@@ -1047,7 +1095,6 @@ button {
 
 aside {
   width: 1130px;
-  /* height: 258px; */
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin: 0 auto 0 auto;

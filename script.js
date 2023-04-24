@@ -1,6 +1,5 @@
 const nav = document.querySelector("nav");
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
   if (window.scrollY >= 50) {
     nav.classList.add("grey");
   } else {
@@ -65,3 +64,19 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//monthly & annual plan
+const monthlyRadio = document.getElementById("monthly");
+const annualRadio = document.getElementById("annual");
+const monthlyTab = document.querySelector(".monthly-tab");
+const annualTab = document.querySelector(".annual-tab");
+
+monthlyRadio.addEventListener("change", () => {
+  monthlyTab.classList.add("active");
+  annualTab.classList.remove("active");
+});
+
+annualRadio.addEventListener("change", () => {
+  monthlyTab.classList.remove("active");
+  annualTab.classList.add("active");
+});
